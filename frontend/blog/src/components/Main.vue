@@ -20,7 +20,7 @@ export default {
 
 <style>
 .main {
-  padding: 65px 0 130px 0;
+  padding: 65px 0 135px 0;
   background-color: #f2f2f2;
   min-height: 100%;
 }
