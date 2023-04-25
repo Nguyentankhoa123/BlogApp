@@ -42,21 +42,20 @@
             <!-- <img :src="imagePreview" v-if="imagePreview" alt="" /> -->
           </div>
         </form>
-        <div class="editor-wrapper">
-          <quill-editor
-            :modules="modules"
-            v-model:content="editorContent"
-            ref="editorContent"
-            contentType="html"
-            theme="snow"
-            toolbar="full"
-            :class="{
-              'is-invalid': errors.editorContent,
-              'ql-container ql-snow': true,
-            }"
-          >
-          </quill-editor>
-        </div>
+        <quill-editor
+          :modules="modules"
+          v-model:content="editorContent"
+          ref="editorContent"
+          contentType="html"
+          theme="snow"
+          toolbar="full"
+          :class="{
+            'is-invalid': errors.editorContent,
+            'ql-container ql-snow': true,
+          }"
+          style="background: #fff"
+        >
+        </quill-editor>
         <div class="invalid-feedback" v-if="errors.editorContent">
           {{ errors.editorContent }}
         </div>
@@ -190,10 +189,6 @@ export default {
 </script>
 
 <style scoped>
-.editor-wrapper {
-  background: #fff;
-}
-
 :deep(.ql-snow.ql-toolbar) {
   position: sticky;
   top: 70px;
