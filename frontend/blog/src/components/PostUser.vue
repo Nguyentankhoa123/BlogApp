@@ -38,6 +38,12 @@
                   <p>{{ removeTags(blog.desc) }}</p>
                 </div>
                 <div class="info-user">
+                  <div class="img-user">
+                    <img
+                      :src="path + '/images/' + blog.userid.profilePic"
+                      alt="Lỗi"
+                    />
+                  </div>
                   <p class="username">{{ blog.userid.username }}</p>
 
                   <div class="date">
